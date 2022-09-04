@@ -1,0 +1,228 @@
+<%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true %>
+<div class="toptext">
+   <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        Warning: Late repayment can cause you serious money problems. We are an authorised credit broker and not a lender. For help, go to <a href="https://www.moneyadviceservice.org.uk/en" target="_blank">moneyadviceservice.org.uk</a>
+        <p class="m-0 toptext p-0">We may receive a commission from the lender</p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'layouts/common/header' %>
+<div class="bg-banner font-style">
+  <div class="row w-100 mx-0">
+    <div class="col-md-4 my-4 pl-md-5">
+      <div class="row justify-content-center">
+        <h4 class="font-weight-bold w-100 text-center lh-21 mb-0">Fast Application</h4>
+        <h4 class="font-weight-bold w-100 text-center">Instant Approval Decision</h4>
+      </div>
+      <div class="bg-light-blu rounded-lg p-3 shadow">
+        <form data-parsley-validate="" id="loans-form" method="get" action="/apply-google">
+          <div class="text-center form-group px-1 mb-4 position-relative">
+            <label class="text-left mb-5 h5 font-weight-bold f-25 w-100 text-lig-blu"> I Want To Borrow</label>
+            <input
+            type="range"
+            min="100"
+            name="loan_amount"
+            max="5000"
+            value="300"
+            step="100"
+            class="loan_amount"
+            id="loan_amount">
+          </div>
+          <div class="text-center form-group mt-3">
+            <label class="text-left mb-2 h5 font-weight-bold f-25 w-100 text-lig-blu">Over How Many Months?</label>
+            <ul class="list-unstyled d-flex align-items-center row m-0 justify-content-center">
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration" name="loan_duration_months" value="3"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration" class="radio-label d-flex align-items-center justify-content-center text-gradient">3
+                </label>
+              </li>
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration6" name="loan_duration_months" value="6"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration6" class="radio-label d-flex align-items-center justify-content-center text-gradient">6
+                </label>
+              </li>
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration12" name="loan_duration_months" value="12"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration12" class="radio-label d-flex align-items-center justify-content-center text-gradient">12
+                </label>
+              </li>
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration15" name="loan_duration_months" value="15"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration15" class="radio-label d-flex align-items-center justify-content-center text-gradient">15
+                </label>
+              </li>
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration18" name="loan_duration_months" value="18"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration18" class="radio-label d-flex align-items-center justify-content-center text-gradient">18
+                </label>
+              </li>
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration24" name="loan_duration_months" value="24"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration24" class="radio-label d-flex align-items-center justify-content-center text-gradient">24
+                </label>
+              </li>
+              <li class="m-1 position-relative">
+                <input type="radio" id="duration36" name="loan_duration_months" value="36"class="radiobtn approve"
+                data-parsley-required="true"
+                data-parsley-required-message="Please Select Months"
+                data-parsley-multiple="duration">
+                <label for="duration36" class="radio-label d-flex align-items-center justify-content-center text-gradient">36
+                </label>
+              </li>
+            </ul>
+            <div class="error-box w-100"></div>
+          </div>
+          <div class="text-center form-group mb-0 mt-3">
+            <label class="text-left mb-2 h5 font-weight-bold f-25 w-100 text-lig-blu"> Email Address</label>
+            <div class="form-group text-center">
+              <input
+              type="email"
+              class="form-control email pre-pop"
+              name="email"
+              id="email"
+              placeholder="exp@example.com"
+              data-parsley-required="true"
+              data-parsley-required-message="Please Enter Valid Email Address"
+              data-parsley-type="email"
+              required="">
+            </div>
+          </div>
+          <input type="hidden" name="source" class="source">
+          <input type="hidden" name="clickid" value="<%= params[:clickid] || '' %>">
+          <input type="hidden" name="tPar[optIn]" class="optinUrl">
+          <div class="text-center">
+            <button type="submit" class="btn form-btn-quote mt-3 py-2 px-3 d-flex align-items-center justify-content-center mx-auto">Get My Quote <%= image_tag("arrow.gif", class: " arrow-img", width:"20") %>
+            </button>
+          </div>
+        </form>
+      </div>
+      <p class="small lh-14 mt-2 text-dark">Rates from 45.3% APR to 1575% APR. Minimum Loan Term is 3 months - Maximum Loan Term is 36 months. Representative Example: Borrow £1000 for 24 months. Annual interest rate 70% (fixed). 24 equal instalments of £77.48. Total amount to repay £1,859.52. Representative 97% APR (variable).</p>
+    </div>
+  </div>
+</div>
+<div class="why-sec container">
+  <div class="row py-5 mx-0 w-100">
+    <h3 class="f-w900 text-center w-100">Why GetFast.Loans</h3>
+    <p class="text-center py-3 mb-0 fs-24 fs-sm-19 mx-auto w-75 w-sm-100">
+      We’ve all been in situations where we’ve been short on cash or even been turned away by a bank when we need to borrow money. When you need money fast, it can be very time-consuming comparing and applying with all the lenders on the market.
+    </p>
+  </div>
+  <div class="row align-items-center">
+    <div class="col-md-6 text-right px-md-0">
+      <%= image_tag("man.jpg", class: "why-img", width:"550") %>
+      <p class="img-text w-50 text-left w-sm-100"> <span class="d-block">You </span> are not <span class="d-block"> a loan.</span></p>
+    </div>
+    <div class="col-md-6 px-md-0">
+      <div class="border-div left-img">
+        <p class="text-border-div">We’ll work with you to find the perfect loan to fit your needs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row align-items-center my-5 flex-sm-row-reverse">
+    <div class="col-md-6 text-left px-md-0">
+      <%= image_tag("riding-bike.jpg", class: "why-img", width:"550") %>
+      <p class="img-text w-50 text-left w-sm-100"> <span class="d-block">Seize </span> the <span class="d-block"> today.</span></p>
+    </div>
+    <div class="col-md-6 px-md-0">
+      <div class="border-div ml-auto right-img">
+        <p class="text-border-div">Receive approval in minutes and get your money in time to tackle your financial challenges.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-light mt-5">
+  <div class="how-works container py-5">
+    <div class="row justify-content-center mb-md-5 mb-3 mx-0 w-100">
+      <h3 class="font-weight-bold text-center w-100">How it works</h3>
+      <p class="text-center py-3 m-0 fs-24 fs-sm-19 mx-auto w-75 w-sm-100">Apply from anywhere and get your money fast.</p>
+    </div>
+    <div class="row align-items-center justify-content-center mx-0 w-100">
+      <div class="col-md-3 text-center">
+        <%= image_tag("form.png", class: "", width:"140") %>
+        <h5 class="text-center fs-24 font-weight-bold mt-3">Get Instant Decision</h5>
+        <p class="text-center">Simply select the amount you want to borrow, the length of the loan, and you’ll soon be up and running.</p>
+      </div>
+      <%= image_tag("arrow-right.png", class: "mx-2 my-3 works-arrow", width:"40") %>
+      <div class="col-md-3 text-center">
+        <%= image_tag("get-money.png", class: "", width:"80") %>
+        <h5 class="text-center fs-24 font-weight-bold mt-3">Get Your Money</h5>
+        <p class="text-center">Once matched with a lender you're happy with, you could receive your funds the same day*</p>
+      </div>
+    </div>
+    <div class="button">
+      <a href="#loans-form" class="d-md-block d-none">
+        <button class="btn btn-quote my-3 py-2 px-3 d-flex align-items-center justify-content-center mx-auto">Get My Quote <%= image_tag("arrow.gif", class: " arrow-img", width:"20") %>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="faqsec section font-style">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h3 class="text-center font-weight-bold">Let us answer your questions</h3>
+        <div class="accordion font-style">
+          <h6 class="font-style">What different types of loans do your lenders offer?</h6>
+          <div>
+            <p>There are a variety of loans available for consumers and it’s important to understand the differences between them to see which one best suits your individual needs. Guarantor loans include an additional person on the loan, such as a friend or family member, who agrees to repay the loan should the borrower miss a payment. Short term loans are small (usually under £1,000), with no-collateral cash advances that are backed by future income. Personal unsecured loans are loans that are not secured against your assets, meaning they don’t require any form of collateral. Instalment loans can be leveraged for several months and payments are spread out over the term of the loan.</p>
+          </div>
+          <h6 class="font-style">How long does it take to apply and receive funds?</h6>
+          <div>
+            <p>The online application takes just a few minutes to complete. GetFast.Loans will then run your application through our network of lenders in an attempt to match you with a qualified lender. If your application is accepted, you will be forwarded to the lender’s completion page so that you can sign for your loan electronically.</p>
+          </div>
+          <h6 class="font-style">How will I receive my funds?</h6>
+          <div>
+            <p>Your funds will be transferred electronically into your bank account - usually on the same day as approval.</p>
+          </div>
+          <h6 class="font-style">What are the eligibility criteria?</h6>
+          <div>
+            <p>The eligibility criteria varies from lender to lender. There are, however, standard criteria requirements that you will be expected to meet in order to apply. This includes the fact that you must be aged 18+, as well as being a UK resident with an active bank account into which you can receive direct debits and a regular source of income.</p>
+          </div>
+          <h6 class="font-style">Why do you require my personal information?</h6>
+          <div>
+            <p>We require your personal information in order to present your application to our lenders, in order for them to guide you through the final stages of securing a loan. Please refer to our Privacy Policy for more details about how we use your personal information.</p>
+          </div>
+          <h6 class="font-style">Will you check my credit score?</h6>
+          <div>
+            <p>GetFast.Loans does not run any credit checks. However, we are a matching service, and the lender we match you with may do so as part of their internal application process.</p>
+          </div>
+          <h6 class="font-style">What is your Representative APR?</h6>
+          <div>
+            <p>Our Representative APR is 97% (variable). A Representative APR takes into account all charges associated with the loan, in addition to the interest rate.</p>
+          </div>
+          <h6 class="font-style">What should I do if I have problems repaying?</h6>
+          <div>
+            <p>If you have any issues repaying your loan, please contact your lender directly, who will be able to discuss repayment options with you. If you have more serious concerns about managing your money, you may contact the Money Advice Service (<a href="https://www.moneyadviceservice.org.uk" target="blank">www.moneyadviceservice.org.uk</a>). Money Advice Service offers free advice to those who need to manage their money more effectively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'layouts/common/footer' %>
+<%= render 'layouts/common/partners-popup'%>
