@@ -6,3 +6,12 @@
 @import './style';
 @import './pages';
 @import './loading_page';
+
+.bg1{
+    width: 100%;
+    height:auto;
+	min-height:100vh;
+    background-image: #BDDCED;
+    background-size: 100% 100%;
+    background-position: top center;
+  }

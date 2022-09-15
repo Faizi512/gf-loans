@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :set_cookies
+  
   def index
     @amp ="/"
   end
@@ -27,6 +28,10 @@ class PagesController < ApplicationController
   def cookie_policy
     @amp = "amp/cookie-policy"
   end
+
+  def pre_check
+  end
+    
 
   private
   def set_cookies
