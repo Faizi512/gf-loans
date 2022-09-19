@@ -81,8 +81,7 @@ class Home extends Common {
           testSold:  params.get('testSold'),
         },
           function(data, status){
-            debugger
-            alert("Data: " + data + "\nStatus: " + status);
+            window.location.replace(window.location.origin + "/thankyou");
           });
     })
 
