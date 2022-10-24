@@ -1,71 +1,101 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	</script>
+<%= stylesheet_link_tag 'precheckstyle' %>
 <%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true %>
-<div class="bg1  text-dark" style="background: #BDDCED; font-family: 'cursive'">
+
+
+<div class="conainall">
+  <div class="bnr_bg">
     <div class="container">
-        <div class="row justify-items-center align-items-center text-center">
-            <div class="col-md-6 offset-md-3   text-dark">
-                <h3 class=" text-dark mt-5" style="font-family: 'cursive'">Thank you for your application. Please confirm the details below.</h3>
-                <h4 class=" text-dark"  style="font-family: 'cursive'"> The loan amount that you have requested is between £5,000 and £15,000. </h4>
-                <p style="font-size: 24px; font-family: 'cursive' !important" class=" text-dark"> You would like to repay over <span id="loanDuration"> 6 </span> months </p>
+      <h4>Thank you for your application.<br>
+        Please confirm the details below.</h4>
+    </div>
+  </div>
 
-                <div class="custom-checkbox col-12 mx-auto mt-3">
-                  <form id="loans-form">
-                    <div class="error-checkbox"></div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input btn-lg" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-                        data-parsley-required="true" data-parsley-group="block-2"
-                        data-parsley-required-message="Please accept our terms and conditions" required>
-                        <label class="form-check-label" for="flexSwitchCheckDefault"  >Accept</label>
-                    </div>
-                    <div class="mt-3">
-                        By clicking accept, I agree to be contacted by Get Fast Loans and Get A
-                        Loan Today via SMS in regards to Loan and Claim Products.
-                        By clicking continue I confirm that these details are true and accurate
-                        and that I have read the <a href="https://getfast.loans/terms-and-conditions">terms and conditions</a>
-                        and <a href="https://getfast.loans/privacy"> privacy policy</a>
-                    </div>
-                    <div class="text-center mt-5">
-                        <button style="background: linear-gradient(to bottom, #ff9b00, #f57200); border: 1px solid #cc5f00; width: 45%;"id="btn-continue" type="button" class="btn btn-success btn-lg o-btn nextStep" >Continue</button>
-                    </div>
-                  </form>
 
-                    <div class="text-center mt-5">
-                        Rates from 49.7% APR to 1333% APR. Minimum Loan Length is 3 months. Maximum Loan Length is 36 months.
-                        Representative Example: £1,200 borrowed for 90 days. Total amount repayable is: £1567. Interest charged is
-                        0.34% per day, amounting to £367, annual interest rate of 124% (variable). Representative APR: 49.7% (variable).
-                    </div>
-                </div>
-            </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="content_area">
+      <div class="data_all">
+        <h5>Please confirm your loan amount</h5>
+        <a>You have applied for a loan between </a>
+        <div class="d-flex justify-content-center">
+          <div class="list-group-item list-group-item-primary w-75 mt-1">
+            Between £5,000 - £15,000
+          </div>
         </div>
-    </div>
-</div>
-<div class="footer">
-  <div class="">
-    <div class="row py-3">
-      <div class="col-12 text-center">
-        <div class="copyright">&copy; 2020 GetFast.Loans All rights reserved.</div>
+        <div class="d-flex justify-content-center">
+          <div class="form-check form-switch cstm_mar">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked data-parsley-required="true" data-parsley-group="block-2"
+            data-parsley-required-message="Please accept our terms and conditions" required>>
+            <label class="form-check-label" for="flexSwitchCheckChecked">I confirm these details are
+              true</label>
+          </div>
+        </div>
+        <p class="mt-3">
+          You have also been approved to apply for a homeowner loan of at least £15,000. We would like to
+          pass you details to our partners at The Personal Finance Centre who may be able to assist you
+          further. They won’t need much of your time, so look out for a call from an 01482 number shortly
+        </p>
       </div>
-    </div>
-    <div class="row w-100 mx-0 justify-content-center align-items-center">
-      <%= image_tag("ccta.png", class: "",  style: "width: 80px") %>
-    </div>
-    <div class="mx-auto text-center container">
-      <p class="mb-1 mt-4">
-        GetFast.Loans is not a lender and does not make credit decisions. GetFast.Loans matches customer applications with lenders in our network based on the information provided, in exchange for a commission paid by the lender for advertising services provided. There is no guarantee that you will be accepted by a lender or that you will be offered terms suitable for your financial needs. The time required to process and transfer the loan varies by the lender. This website does not directly endorse any particular product or service. Any information on this site should serve as opinion only. As a condition of extending credit, some lenders you may be matched with may run a credit check from a credit reference agency. Late or missed payments may be subject to increased fees and/or interest rates.
-      </p>
 
-      <p class="my-1 pl-2">
-        1. Not all lenders will be able to provide amounts up to £5000. 2. Not all lenders pay out the same day.
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          I consent to my details being passed to The Personal Finance Centre
+        </label>
+      </div>
+      <p>
+        I consent to The Personal Finance Centre contacting <br>
+        me via the following channels
       </p>
+      <div class="form-check form-check0">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+        <label class="form-check-label" for="flexCheckDefault1">
+          SMS
+        </label>
+      </div>
 
-      <p class="my-1">
-        GetFast.Loans is a registered trading name of Duke Leads FZCO, which is an Introducer Appointed Representative of T Dot UK Limited, registered under FRN 955804. T Dot UK Limited are authorised and regulated by the Financial Conduct Authority and are entered on the Financial Services Register under reference number: 688026.
+      <div class="form-check form-check0">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+        <label class="form-check-label" for="flexCheckDefault2">
+          Email
+        </label>
+      </div>
+
+      <div class="form-check form-check0">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+        <label class="form-check-label" for="flexCheckDefault3">
+          Phone
+        </label>
+      </div>
+
+      <p class="text-center">
+        By clicking continue I confirm that these details are true and accurate and<br>
+        that I have read the terms and conditions and privacy policy
       </p>
-
-      <p class="my-1">
-        Duke Leads FZCO is registered in the United Arab Emirates under licence number 6245 with its registered office located at DSO-IFZA, Dubai Silicon Oasis, Dubai, UAE.
+      <div class="d-grid gap-2 col-12 mx-auto">
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary btn-lg col-md-4 nextStep" id="btn-continue"  type="button">Continue</button>
+        </div>
+      </div>
+      <p class="text-center">
+        Secured Loan Representative Example: If you borrow £15,000 over 10 years at an annual interest rate
+        of 7.40% you would make 120 payments of £202.03 per month. The total amount repayable will be
+        £24243.55 (This includes a lender fee of £595 and a broker fee of £1500 which have been added to the
+        loan). Total charge for credit will be £9243.55. Overall cost for comparison is 10.456% APRC
+        representative. The Personal Finance Centre is a leading broker and not a lender.
       </p>
     </div>
   </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+	</script>

@@ -16,72 +16,107 @@ class Home extends Common {
       }
     });
     const params = new URLSearchParams(window.location.search)
-    document.getElementById("loanDuration").innerHTML =  params.get("loanDurationMonths")
+    // document.getElementById("loanDuration").innerHTML =  params.get("loanDurationMonths")
    
      
     $("#btn-continue").click(function(e){
-      $.post("https://leads-inst47-client.phonexa.uk/lead/",
+      debugger
+      $.post("/submit_lead",
         {
-          apiId: "AA2FCE25C4114E41B064284FA9CCDC38",
-          apiPassword: "5aff2e78f2",
-          dob: params.get('dob') || "" ,
-          consentCreditSearch	: params.get("consentCreditSearch") || "",
-          consentFinancial: params.get("consentFinancial") || "",
-          thirdPartyPhone: params.get('thirdPartyPhone') || '0',
-          thirdPartyTextMessage: params.get('thirdPartyTextMessage') || '0',
-          thirdPartyEmail: params.get('thirdPartyEmail')  || '0',
-          bankDebitCardType: params.get('bankDebitCardType') || '',
-          bankSortCode:  params.get('bankSortCode') || '',
-          bankAccountNumber:  params.get('bankAccountNumber') || '',
-          expenseFood: params.get('expenseFood') || '',
-          expenseTransport: params.get('expenseTransport') || '',
-          expenseUtilities: params.get('expenseUtilities') || '',
-          expenseOther: params.get('expenseOther') || '',
-          expenseAllLoans: params.get('expenseAllLoans') || '',
-          expenseHousing: params.get('expenseHousing') || '',
-          workTimeAtEmployer: params.get('workTimeAtEmployer') || '',
-          workIndustry: params.get('workIndustry') || '',
-          workCompanyName: params.get('workCompanyName') || '',
-          incomeNextDate2: params.get('incomeNextDate2') || '',
-          incomeNextDate1: params.get('incomeNextDate1') || '',
-          incomePaymentFrequency: params.get('incomePaymentFrequency') || '',
-          bankDirectDeposit: params.get('bankDirectDeposit')  || '',
-          incomeNetMonthly: params.get('incomeNetMonthly') || '',
-          incomeType: params.get('incomeType') || '',
-          monthsAtAddress:  params.get('monthsAtAddress') || '',
-          residentialStatus: params.get('residentialStatus') || '',
-          numberOfDependents:  params.get('numberOfDependents')  || '',
-          maritalStatus:  params.get('maritalStatus') || '',
-          title:  params.get('title')  || '',
-          loanDurationMonths:  params.get('loanDurationMonths') || "",
-          loanAmount: params.get('loanAmount') || '',
-          loanPurpose:  params.get('loanPurpose') || '',
-          postCode:  params.get('postCode')  || '',
-          street:  params.get('street') || '',
-          city:  params.get('towncity') || '',
-          houseNumber:  params.get('flatNumber') || '',
-          county: params.get('county') || '',
-          firstName:  params.get('firstname') || '',
-          lastName:  params.get('lastname') || '',
           email:  params.get('email') || '',
-          cellPhone:  params.get('cellPhone')  || '',
-          homePhone: params.get('homePhone')  || '',
-          workPhone: params.get('workPhone') || '',
-          userIp: params.get('userIp') || "192.168.1.1",
-          sid:  params.get('sid') || 1,
-          ssid:  params.get('ssid') || 1,
-          ad_set: params.get('ad_set') || 1,
+          title:  params.get('title')  || '',
+          firstname:  params.get('firstname') || '',
+          lastname:  params.get('lastname') || '',
+          dob: params.get('dob') || "" ,
+          building: params.get('building') || "" ,
+          street1: params.get('street1') || "",
+          street2: params.get('street2') || "",
+          towncity:  params.get('towncity') || '',
+          county: params.get('county') || '',
+          postcode: params.get('postcode') || "",
+          country: params.get("country") || "",
+          phone1:  params.get('phone1')  || '',
+          company: params.get("company") || "",
+          jobtitle: params.get("jobtitle") || "",
+          ipaddress: params.get('ipaddress') || "",
           source:  params.get('source') ||  'google3',
-          c1:  params.get('c1') ||  params.get('bstransid') ||  params.get('transid') || '',
-          adgroupid:  params.get('adgroupid') || '',
-          campaign:  params.get('campaign') || '',
-          productId: "4",
-          price: params.get("price") || "15",
-          testMode:  params.get('testMode'),
-          testSold:  params.get('testSold'),
+          ssid:  params.get('ssid') || 1,
+          gender: params.get("gender") || "",
+          workindustry: params.get('workindustry') || '',
+          residentialstatus: params.get('residentialstatus') || '',
+          numberofdependents:  params.get('numberofdependents')  || '',
+          maritalstatus:  params.get('maritalstatus') || '',
+          loandurationmonths:  params.get('loandurationmonths') || "",
+          loanamount: params.get('loanamount') || '',
+          loanpurpose:  params.get('loanpurpose') || '',
+          housename: params.get("housename") || "",
+          homephone: params.get('homephone')  || '',
+          workphone: params.get('workphone') || '',
+          workcompanyname	: params.get("workcompanyname	") || "",
+          worktimeatemployer: params.get("worktimeatemployer") || "",
+          expensefood: params.get('expensefood') || '',
+          expensetransport: params.get('expensetransport') || '',
+          expenseutilities: params.get('expenseutilities') || '',
+          expenseother: params.get('expenseother') || '',
+          expenseallloans: params.get('expenseallloans') || '',
+          expensehousing: params.get('expensehousing') || '',
+          incomenextdate2: params.get('incomenextdate2') || '',
+          incomenextdate1: params.get('incomenextdate1') || '',
+          incomepaymentfrequency: params.get('incomepaymentfrequency') || '',
+          incomenetmonthly: params.get('incomenetmonthly') || '',
+          incometype: params.get('incometype  ') || '',
+          monthsataddress:  params.get('monthsataddress') || '',
+          sid:  params.get('sid') || 1,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          // consentCreditSearch	: params.get("consentCreditSearch") || "",
+          // consentFinancial: params.get("consentFinancial") || "",
+          // thirdPartyPhone: params.get('thirdPartyPhone') || '0',
+          // thirdPartyTextMessage: params.get('thirdPartyTextMessage') || '0',
+          // thirdPartyEmail: params.get('thirdPartyEmail')  || '0',
+          // bankDebitCardType: params.get('bankDebitCardType') || '',
+          // bankSortCode:  params.get('bankSortCode') || '',
+          // bankAccountNumber:  params.get('bankAccountNumber') || '',
+          // bankDirectDeposit: params.get('bankDirectDeposit')  || '',
+          // street:  params.get('street') || '',
+          // houseNumber:  params.get('flatNumber') || '',
+          // ad_set: params.get('ad_set') || 1,
+          // c1:  params.get('c1') ||  params.get('bstransid') ||  params.get('transid') || '',
+          // adgroupid:  params.get('adgroupid') || '',
+          // campaign:  params.get('campaign') || '',
+          // productId: "4",
+          // price: params.get("price") || "15",
+          // testMode:  params.get('testMode'),
+          // testSold:  params.get('testSold'),
         },
           function(data, status){
-            window.location.replace(window.location.origin + "/thankyou");
+            debugger
+            if(data.data.code == 1)
+              window.location.replace(window.location.origin + "/precheck_thankyou");
+            else
+              alert("error: " + data.data.info.code + ". status: "+ data.data.info.status)
           });
     })
 

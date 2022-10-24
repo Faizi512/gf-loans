@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/cookie-policy' => 'pages#cookie_policy'
   get '/unsubscribe' => 'pages#unsubscribe'
   get '/pre-check' => 'pages#pre_check'
+  post '/submit_lead' => 'pages#submit_lead'
+  get '/precheck_thankyou' => 'pages#precheck_thankyou'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'pages#index'
   resources :deliveries

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 0px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none} 
+body{font-family: 'Work Sans', sans-serif;} 
+h1, h2, h3, h4, h5, h6, p{ padding: 0px; margin: 0px;}
+
+.theme_spacing{ margin:5% 0 3% 0px;}
+
+
+.bnr_bg{ background:#798DC2; padding:3% 0 9% 0px;}
+.bnr_bg h4{ font-size:32px; font-weight:700; text-align: center; color:#fff;}
+
+.conainall{ position: relative;}
+.content_area{ top:200px; background: #FF0004; padding: 30px; z-index: 999; position:absolute; width: 70%; border-radius:40px; padding: 30px; border:solid #dbdbdb 1px; background: #fff }
+.content_area p{ font-size:20px; margin-top:15px; color: #1C1C1C; font-weight:normal; letter-spacing: normal; margin:20px 0 0 0px; }
+
+.data_all{ text-align: center;}
+.data_all h5{ font-size:32px; font-weight:bold; color:#798DC2;}
+.data_all a{ font-size:20px; font-weight:normal; margin:3% 0 0 0px; color:#1C1C1C; display: block; text-decoration: none;}
+.data_all p{ font-size:20px; font-weight:normal; margin:0% 0 0 0px; color:#1C1C1C;}
+
+.list-group-item-primary {
+    color: #40589A;
+    background-color: #cfe2ff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.cstm_mar{ margin:30px 0px;}
+
+.form-check {
+    display: block; margin:30px 0 0 0px;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.125rem;
+}
+
+.form-check0 {
+    display: block; margin:15px 0 0 0px;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0.125rem;
+}
+
+.btn-primary { font-size: 20px; font-weight: 600;
+    color: #fff; margin:20px 0 0 0; border-radius:8px;
+    background-color: #ff8e43;
+    border-color: #FF8E43;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #40589a;
+    border-color: #40589a;
+}
+
+    @media only screen and (min-width: 960px) {
+        /* styles for browsers larger than 960px; */
+    }
+    @media only screen and (min-width: 1440px) {
+        /* styles for browsers larger than 1440px; */
+    }
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
+    }
+    @media only screen and (max-device-width: 480px) {
+ 
+    }
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens */
+    }
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width:320px) and (max-device-width: 480px) and (orientation:portrait) {
+		.form-check {
+    display: block;
+    margin: 30px 0 0 0px;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.125rem;
+}
+		.content_area p {
+    font-size: 17px;
+    margin-top: 15px;
+    color: #1C1C1C;
+    font-weight: normal;
+    letter-spacing: normal;
+    margin: 20px 0 0 0px;
+}
+		
+		.data_all a {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 8% 0 0 0px;
+    color: #1C1C1C;
+    display: block;
+    text-decoration: none;
+}
+		.data_all p {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 0% 0 0 0px;
+    color: #1C1C1C;
+}
+		.w-75 {
+    width:100%!important;
+}
+		 .list-group-item-primary {
+    color: #40589A;
+    background-color: #cfe2ff;
+    font-size: 12px;
+    font-weight: 800;
+}
+.data_all h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #798DC2;
+}
+		.content_area {
+    top: 64px;
+    background: #FF0004;
+    padding: 30px;
+    z-index: 999;
+    position: absolute;
+    width: 90%;
+    border-radius: 40px;
+    padding: 30px;
+    border: solid #dbdbdb 1px;
+    background: #fff;
+}
+ .cstm_mar {
+    margin: 30px 0px;
+    text-align: left;
+}
+		.bnr_bg h4 {
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+ 
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      /* For landscape layouts only */
+		
+    }
+
+         
