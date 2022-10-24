@@ -38,7 +38,6 @@ class PagesController < ApplicationController
   end
 
   def submit_lead
-    byebug
     url = URI.parse(
             "https://dukeleads.leadbyte.co.uk/api/submit.php?
             campid=LATCH-15-LOANS&returnjson=yes&phone1=#{params[:phone1]} 
