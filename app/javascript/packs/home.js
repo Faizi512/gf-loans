@@ -20,7 +20,6 @@ class Home extends Common {
    
      
     $("#btn-continue").click(function(e){
-      debugger
       $.post("/submit_lead",
         {
           email:  params.get('email') || '',
@@ -67,49 +66,6 @@ class Home extends Common {
           incometype: params.get('incometype  ') || '',
           monthsataddress:  params.get('monthsataddress') || '',
           sid:  params.get('sid') || 1,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          // consentCreditSearch	: params.get("consentCreditSearch") || "",
-          // consentFinancial: params.get("consentFinancial") || "",
-          // thirdPartyPhone: params.get('thirdPartyPhone') || '0',
-          // thirdPartyTextMessage: params.get('thirdPartyTextMessage') || '0',
-          // thirdPartyEmail: params.get('thirdPartyEmail')  || '0',
-          // bankDebitCardType: params.get('bankDebitCardType') || '',
-          // bankSortCode:  params.get('bankSortCode') || '',
-          // bankAccountNumber:  params.get('bankAccountNumber') || '',
-          // bankDirectDeposit: params.get('bankDirectDeposit')  || '',
-          // street:  params.get('street') || '',
-          // houseNumber:  params.get('flatNumber') || '',
-          // ad_set: params.get('ad_set') || 1,
-          // c1:  params.get('c1') ||  params.get('bstransid') ||  params.get('transid') || '',
-          // adgroupid:  params.get('adgroupid') || '',
-          // campaign:  params.get('campaign') || '',
-          // productId: "4",
-          // price: params.get("price") || "15",
-          // testMode:  params.get('testMode'),
-          // testSold:  params.get('testSold'),
         },
           function(data, status){
             debugger

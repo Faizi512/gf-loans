@@ -38,63 +38,56 @@ class PagesController < ApplicationController
   end
 
   def submit_lead
-    url = URI.parse(
+    uri = URI(
             "https://dukeleads.leadbyte.co.uk/api/submit.php?
-            campid=LATCH-15-LOANS&returnjson=yes&phone1=#{params[:phone1]} 
+            campid=LATCH-15-LOANS&returnjson=yes&
+            phone1=#{params[:phone1]}&
+            email=#{params[:email]}&
+            title=#{params[:title]}&
+            firstname=#{params[:firstname]}&
+            lastname=#{params[:lastname]}&
+            dob=#{params[:dob]}&
+            building=#{params[:building]}&
+            street1=#{params[:street1]}&
+            street2=#{params[:street2]}&
+            towncity=#{params[:towncity]}&
+            county=#{params[:county]}&
+            postcode=#{params[:postcode]}&
+            country=#{params[:country]}&
+            phone1=#{params[:phone1]}&
+            company=#{params[:company]}&
+            jobtitle=#{params[:jobtitle]}&
+            ipaddress=#{params[:ipaddress]}&
+            source=#{params[:source]}&
+            ssid=#{params[:ssid]}&
+            gender=#{params[:gender]}&
+            workindustry=#{params[:workindustry]}&
+            residentialstatus=#{params[:residentialstatus]}&
+            numberofdependents=#{params[:numberofdependents]}&
+            maritalstatus=#{params[:maritalstatus]}&
+            loandurationmonths=#{params[:loandurationmonths]}&
+            loanamount=#{params[:loanamount]}&
+            loanpurpose=#{params[:loanpurpose]}&
+            housename=#{params[:housename]}&
+            homephone=#{params[:homephone]}&
+            workphone=#{params[:workphone]}&
+            workcompanyname=#{params[:workcompanyname]}&
+            worktimeatemployer=#{params[:worktimeatemployer]}&
+            expensefood=#{params[:expensefood]}&
+            expensetransport=#{params[:expensetransport]}&
+            expenseutilities=#{params[:expenseutilities]}&
+            expenseother=#{params[:expenseother]}&
+            expenseallloans=#{params[:expenseallloans]}&
+            expensehousing=#{params[:expensehousing]}&
+            incomenextdate2=#{params[:incomenextdate2]}&
+            incomenextdate1=#{params[:incomenextdate1]}&
+            incomepaymentfrequency=#{params[:incomepaymentfrequency]}&
+            incomenetmonthly=#{params[:incomenetmonthly]}&
+            incometype=#{params[:incometype]}&
+            monthsataddress=#{params[:monthsataddress]}&
+            sid=#{params[:sid]}
           ")
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = true
-    # res = Net::HTTP.get_response(url)
-    data = {
-      email:  params[:email],
-      title:  params[:title],
-      firstname:  params[:firstname] ,
-      lastname:  params[:lastname] ,
-      dob: params[:dob]  ,
-      building: params[:building]  ,
-      street1: params[:street1] ,
-      street2: params[:street2] ,
-      towncity:  params[:towncity] ,
-      county: params[:county] ,
-      postcode: params[:postcode] ,
-      country: params[:country] ,
-      phone1:  params[:phone1]  ,
-      company: params[:company] ,
-      jobtitle: params[:jobtitle] ,
-      ipaddress: params[:ipaddress] ,
-      source:  params[:source] ||  'google3',
-      ssid:  params[:ssid] || 1,
-      gender: params[:gender] ,
-      workindustry: params[:workindustry] ,
-      residentialstatus: params[:residentialstatus] ,
-      numberofdependents:  params[:numberofdependents]  ,
-      maritalstatus:  params[:maritalstatus] ,
-      loandurationmonths:  params[:loandurationmonths] ,
-      loanamount: params[:loanamount] ,
-      loanpurpose:  params[:loanpurpose] ,
-      housename: params[:housename] ,
-      homephone: params[:homephone]  ,
-      workphone: params[:workphone] ,
-      workcompanyname: params[:workcompanyname] ,
-      worktimeatemployer: params[:worktimeatemployer] ,
-      expensefood: params[:expensefood] ,
-      expensetransport: params[:expensetransport] ,
-      expenseutilities: params[:expenseutilities] ,
-      expenseother: params[:expenseother] ,
-      expenseallloans: params[:expenseallloans] ,
-      expensehousing: params[:expensehousing] ,
-      incomenextdate2: params[:incomenextdate2] ,
-      incomenextdate1: params[:incomenextdate1] ,
-      incomepaymentfrequency: params[:incomepaymentfrequency],
-      incomenetmonthly: params[:incomenetmonthly],
-      incometype: params[:incometype  ],
-      monthsataddress:  params[:monthsataddress],
-      sid:  params[:sid]
-    }
-    request = Net::HTTP::Post.new(url, {'Content-Type' => 'application/json'} )
-    request.body = data.to_json
-
-    response = http.request(request)
+    response = Net::HTTP.get_response(uri)
     render json: {data: JSON.parse(response.body)}
   end
     
